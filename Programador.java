@@ -1,4 +1,4 @@
-package main;
+package empleado;
 
 class Programador extends Empleado{
     
@@ -12,4 +12,16 @@ class Programador extends Empleado{
         this.lenguajeDominante = lenguajeDominante;
     } 
     public Programador (){}
+
+    @Override
+    public String toString() {
+        return "El Programador \n"
+                +super.toString()+"\n"
+                + "- lineas de codigo por hora = " + lineasDeCodigoPorHora + "\n"
+                + "- lenguaje dominante = " + lenguajeDominante + "\n";
+    }
+    
+    
+    
+    
 }
