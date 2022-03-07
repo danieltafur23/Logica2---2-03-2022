@@ -38,13 +38,13 @@ public class Empleado {
     public String clasificacion(){
         String retorno="";
 
-        if(edad<=21){
+        if(getEdad()<=21){
             retorno = "Principiante";
         }
-        if((edad>=22)&(edad <= 35)){
+        if((getEdad()>=22)&(getEdad() <= 35)){
             retorno = "Intermedio";
         }
-        if(edad>35){
+        if(getEdad()>35){
             retorno = "Seniro";
         }
         
@@ -54,20 +54,92 @@ public class Empleado {
     @Override
     public String toString() {
         
-        String cadena = ("Nombre: " + nombre + "\n"
-                        + "Cedula: " + cedula + "\n"
-                        + "Edad: " + edad + "\n"
+        String cadena = ("Nombre: " + getNombre() + "\n"
+                        + "Cedula: " + getCedula() + "\n"
+                        + "Edad: " + getEdad() + "\n"
                         + "Casado: ");
                         
-        if(casado){
+        if(isCasado()){
             cadena += "Si \n";
         }else{
             cadena += "No \n";
         }
-        cadena += "Salario: " + salario +"\n\n";
+        cadena += "Salario: " + getSalario() +"\n\n";
                 
         
         return cadena;
+    }
+
+    public double aumentoSalario (double salario){
+        this.salario = this.salario*(1+(salario/100));
+        return this.salario;
+    }
+    
+    public String getCedula() {
+        return cedula;
+    }
+
+    /**
+     * @param cedula the cedula to set
+     */
+    public void setCedula(String cedula) {
+        this.cedula = cedula;
+    }
+
+    /**
+     * @return the nombre
+     */
+    public String getNombre() {
+        return nombre;
+    }
+
+    /**
+     * @param nombre the nombre to set
+     */
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    /**
+     * @return the edad
+     */
+    public int getEdad() {
+        return edad;
+    }
+
+    /**
+     * @param edad the edad to set
+     */
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    /**
+     * @return the casado
+     */
+    public boolean isCasado() {
+        return casado;
+    }
+
+    /**
+     * @param casado the casado to set
+     */
+    public void setCasado(boolean casado) {
+        this.casado = casado;
+    }
+
+    /**
+     * @return the salario
+     */
+    public double getSalario() {
+        return salario;
+    }
+
+    /**
+     * @param salario the salario to set
+     */
+    public void setSalario(double salario) {
+        this.salario = salario;
     }
     
    
