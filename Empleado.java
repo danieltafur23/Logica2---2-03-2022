@@ -14,7 +14,7 @@ Necesita llevr un registro de sus empleados
         edad > 35
 
 */        
-package main;
+package empleado;
 
 public class Empleado {
 
@@ -67,7 +67,7 @@ public class Empleado {
         cadena += "Salario: " + salario +"\n\n";
                 
         
-        return super.toString();
+        return cadena;
     }
     
    
